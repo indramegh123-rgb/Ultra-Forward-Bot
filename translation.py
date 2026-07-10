@@ -1,154 +1,149 @@
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
-
-
-
+# 🛡️ ꜱʏꜱᴛᴇᴍ ᴄᴏʀᴇ: @IND_BOTZ
+# 🎯 ᴏᴡɴᴇᴅ & ᴏᴘᴇʀᴀᴛᴇᴅ ʙʏ @IND_BOTZ
+# ⚠️ ᴀʟʟ ʀɪɢʜᴛꜱ ʀᴇꜱᴇʀᴠᴇᴅ
 
 import os
 from config import Config
 
 class Translation(object):
-  START_TXT = """Hey {}
+  START_TXT = """<blockquote><b>🚀 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ᴜʟᴛɪᴍᴀᴛᴇ ꜰᴏʀᴡᴀʀᴅɪɴɢ ᴇɴɢɪɴᴇ, {} !</b></blockquote>
 
-➻ I Am A Advanced Auto Forward Bot
-  
-➻ I Can Forward All Message From One Channel To Another Channel 
-  
-➻ Click Help Button To Know More About Me
-  
-<b>Bot Is Made By @Madflix_Bots</b>"""
+▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰▰
 
+⚡ <b>ᴇxᴘᴇʀɪᴇɴᴄᴇ ꜱᴇᴀᴍʟᴇꜱꜱ ᴍᴇꜱꜱᴀɢᴇ ᴛʀᴀɴꜱꜰᴇʀꜱ ᴀᴄʀᴏꜱꜱ ᴄʜᴀɴɴᴇʟꜱ.</b>
+⚙️ <b>ᴘᴏᴡᴇʀꜰᴜʟ, ꜰᴀꜱᴛ, ᴀɴᴅ ꜰᴜʟʟʏ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ ꜰᴏʀ ʏᴏᴜʀ ɴᴇᴇᴅꜱ.</b>
 
-  HELP_TXT = """<b><u>🛠️ Help</b></u>
+🎯 <b>ᴛᴀᴘ ʜᴇʟᴘ ᴛᴏ ᴇxᴘʟᴏʀᴇ ᴍʏ ᴘᴏᴡᴇʀꜱ.</b>
 
-<b><u>📚 Available Commands :</u></b>
-⏣ __/start - Check I'm Alive__ 
-⏣ __/forward - Forward Messages__
-⏣ __/unequify - Delete Duplicate Messages In Channels__
-⏣ __/settings - Configure Your Settings__
-⏣ __/reset - Reset Your Settings__
+<blockquote><b>🛡️ ɴᴇᴛᴡᴏʀᴋ ᴍᴀɴᴀɢᴇᴅ ʙʏ @IND_BOTZ</b></blockquote>"""
 
-<b><u>💢 Features :</b></u>
-► __Forward Message From Public Channel To Your Channel Without Admin Permission. If The Channel Is Private Need Admin Permission__
-► __Forward Message From Private Channel To Your Channel By Using Userbot(User Must Be Member In There)__
-► __Custom Caption__
-► __Custom Button__
-► __Support Restricted Chats__
-► __Skip Duplicate Messages__
-► __Filter Type Of Messages__
-► __Skip Messages Based On Extensions & Keywords & Size__
-"""
-  
-  HOW_USE_TXT = """<b><u>⚠️ Before Forwarding :</b></u>
-  
-► __Add A Bot Or Userbot__
-► __Add Atleast One To Channel (Your Bot/Userbot Must Be Admin In There)__
-► __You Can Add Chats Or Bots By Using /settings__
-► __If The **From Channel** Is Private Your Userbot Must Be Member In There Or Your Bot Must Need Admin Permission In There Also__
-► __Then Use /forward To Forward Messages__"""
-  
-  ABOUT_TXT = """<b>🤖 My Name :</b> {}
-<b>📝 Language :</b> <a href='https://python.org'>Python 3</a>
-<b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
-<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a>
-<b>📢 Channel :</b> <a href='https://t.me/Madflix_Bots'>Madflix Botz</a>
-<b>🧑‍💻 Developer :</b> <a href='https://t.me/CallAdminRobot'>Jishu Developer</a>
+  HELP_TXT = """<blockquote><b><u>🎛️ ᴀᴅᴠᴀɴᴄᴇᴅ ᴄᴏɴᴛʀᴏʟ ᴘᴀɴᴇʟ</u></b></blockquote>
 
-<b>♻️ Bot Made By :</b> @Madflix_Bots"""
-  
-  STATUS_TXT = """<b><u>Bot Status</u></b>
-  
-<b>👱 Total Users :</b> <code>{}</code>
+<b><u>📌 ꜱʏꜱᴛᴇᴍ ᴄᴏᴍᴍᴀɴᴅꜱ :</u></b>
+⏣ <code>/start</code> - <b>ɪɴɪᴛɪᴀʟɪᴢᴇ ᴛʜᴇ ᴇɴɢɪɴᴇ</b>
+⏣ <code>/forward</code> - <b>ʙᴇɢɪɴ ᴛʀᴀɴꜱᴍɪꜱꜱɪᴏɴ</b>
+⏣ <code>/unequify</code> - <b>ᴄʟᴇᴀɴ ᴜᴘ ᴅᴜᴘʟɪᴄᴀᴛᴇ ᴅᴀᴛᴀ</b>
+⏣ <code>/settings</code> - <b>ᴏᴘᴇɴ ᴄᴏɴꜰɪɢᴜʀᴀᴛɪᴏɴ</b>
+⏣ <code>/reset</code> - <b>ʀᴇꜱᴛᴏʀᴇ ᴅᴇꜰᴀᴜʟᴛꜱ</b>
 
-<b>🤖 Total Bots :</b> <code>{}</code>
+<b><u>🔥 ᴇxᴄʟᴜꜱɪᴠᴇ ᴘᴇʀᴋꜱ :</u></b>
+► <b>ʙʏᴘᴀꜱꜱ ᴀᴅᴍɪɴ ʀᴇꜱᴛʀɪᴄᴛɪᴏɴꜱ ꜰᴏʀ ᴘᴜʙʟɪᴄ ᴢᴏɴᴇꜱ.</b>
+► <b>ꜱᴇᴀᴍʟᴇꜱꜱ ᴘʀɪᴠᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ᴇxᴛʀᴀᴄᴛɪᴏɴ ᴠɪᴀ ᴜꜱᴇʀʙᴏᴛ.</b>
+► <b>ɪɴᴊᴇᴄᴛ ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴꜱ & ɪɴʟɪɴᴇ ʙᴜᴛᴛᴏɴꜱ.</b>
+► <b>ᴀᴜᴛᴏ-ꜱᴋɪᴘ ʀᴇᴅᴜɴᴅᴀɴᴛ & ᴄʟᴏɴᴇᴅ ꜰɪʟᴇꜱ.</b>
+► <b>ᴀᴅᴠᴀɴᴄᴇᴅ ꜰɪʟᴛᴇʀɪɴɢ ʙʏ ꜱɪᴢᴇ, ᴋᴇʏᴡᴏʀᴅ ᴏʀ ᴇxᴛᴇɴꜱɪᴏɴ.</b>
 
-<b>🔃 Forwardings :</b> <code>{}</code>
-"""
+<blockquote><b>⚡ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @IND_BOTZ</b></blockquote>"""
   
-  FROM_MSG = "<b><u>Set Source Chat</></>\n\nForward The Last Message Or Last Message Link Of Source Chat.\n/cancel - To Cancel This Process"
-  TO_MSG = "<b><u>Choose Target Chat</u></b>\n\nChoose Your Target Chat From The Given Buttons.\n/cancel - To Cancel This Process"
-  SKIP_MSG = "<b><u>Set Message Skiping Number</u></b>\n\nSkip The Message As Much As You Enter The Number And The Rest Of The Message Will Be Forwarded\nDefault Skip Number = <code>0</code>\n<code>eg: You Enter 0 = 0 Message Skiped\nYou Enter 5 = 5 Message Skiped</code>\n/cancel - To Cancel This Process"
-  CANCEL = "Process Cancelled Succefully !"
-  BOT_DETAILS = "<b><u>📄 Bot Details</u></b>\n\n<b>➣ Name :</b> <code>{}</code>\n<b>➣ Bot ID :</b> <code>{}</code>\n<b>➣ Username :</b> @{}"
-  USER_DETAILS = "<b><u>📄 UserBot Details</u></b>\n\n<b>➣ Name :</b> <code>{}</code>\n<b>➣ User ID :</b> <code>{}</code>\n<b>➣ Username :</b> @{}"  
+  HOW_USE_TXT = """<blockquote><b><u>📖 ᴏᴘᴇʀᴀᴛɪᴏɴᴀʟ ɢᴜɪᴅᴇʟɪɴᴇꜱ :</u></b></blockquote>
+  
+► <b>ɪɴᴛᴇɢʀᴀᴛᴇ ᴛʜᴇ ʙᴏᴛ ᴏʀ ᴜꜱᴇʀʙᴏᴛ ɪɴᴛᴏ ʏᴏᴜʀ ᴄʜᴀɴɴᴇʟꜱ.</b>
+► <b>ᴇɴꜱᴜʀᴇ ᴀᴅᴍɪɴ ᴘʀɪᴠɪʟᴇɢᴇꜱ ᴀʀᴇ ɢʀᴀɴᴛᴇᴅ ɪɴ ᴛʜᴇ ᴅᴇꜱᴛɪɴᴀᴛɪᴏɴ.</b>
+► <b>ɴᴀᴠɪɢᴀᴛᴇ ᴛᴏ <code>/settings</code> ᴛᴏ ᴀᴛᴛᴀᴄʜ ʏᴏᴜʀ ᴄʜᴀᴛꜱ.</b>
+► <b>ꜰᴏʀ ᴘʀɪᴠᴀᴛᴇ ꜱᴏᴜʀᴄᴇꜱ, ʏᴏᴜʀ ᴜꜱᴇʀʙᴏᴛ ᴍᴜꜱᴛ ʙᴇ ᴀɴ ᴀᴄᴛɪᴠᴇ ᴍᴇᴍʙᴇʀ.</b>
+► <b>ᴇxᴇᴄᴜᴛᴇ <code>/forward</code> ᴛᴏ ɪɢɴɪᴛᴇ ᴛʜᴇ ᴘʀᴏᴄᴇꜱꜱ.</b>
+
+<blockquote><b>🛡️ @IND_BOTZ</b></blockquote>"""
+  
+  ABOUT_TXT = """<blockquote><b><u>⚙️ ꜱʏꜱᴛᴇᴍ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ</u></b></blockquote>
+
+<b>🏷️ ᴅᴇꜱɪɢɴᴀᴛɪᴏɴ :</b> {}
+<b>🧠 ᴄᴏʀᴇ ᴇɴɢɪɴᴇ :</b> <b>ᴀᴅᴠᴀɴᴄᴇᴅ ᴘʏ-ꜱᴄʀɪᴘᴛ</b>
+<b>📡 ʜᴏꜱᴛɪɴɢ ᴢᴏɴᴇ :</b> <b>ᴘʀᴇᴍɪᴜᴍ ᴄʟᴏᴜᴅ</b>
+<b>📢 ᴏꜰꜰɪᴄɪᴀʟ ʜᴜʙ :</b> <a href='https://t.me/IND_BOTZ'>@IND_BOTZ</a>
+<b>🧑‍💻 ᴀʀᴄʜɪᴛᴇᴄᴛ :</b> <a href='https://t.me/IND_BOTZ'>@IND_BOTZ</a>
+
+<blockquote><b>♻️ ᴇxᴄʟᴜꜱɪᴠᴇʟʏ ᴍᴀᴅᴇ ꜰᴏʀ @IND_BOTZ</b></blockquote>"""
+  
+  STATUS_TXT = """<blockquote><b><u>📈 ɴᴇᴛᴡᴏʀᴋ ꜱᴛᴀᴛɪꜱᴛɪᴄꜱ</u></b></blockquote>
+  
+<b>👤 ᴀᴄᴛɪᴠᴇ ᴄʟɪᴇɴᴛꜱ :</b> <code>{}</code>
+
+<b>🤖 ᴄᴏɴɴᴇᴄᴛᴇᴅ ɴᴏᴅᴇꜱ :</b> <code>{}</code>
+
+<b>🔄 ᴛʀᴀɴꜱꜰᴇʀꜱ ᴅᴏɴᴇ :</b> <code>{}</code>
+
+<blockquote><b>⚡ ᴍᴀɴᴀɢᴇᴅ ʙʏ @IND_BOTZ</b></blockquote>"""
+  
+  FROM_MSG = "<blockquote><b><u>📡 ʟᴏᴄᴀᴛᴇ ꜱᴏᴜʀᴄᴇ ᴢᴏɴᴇ</u></b></blockquote>\n\n<b>ꜰᴏʀᴡᴀʀᴅ ᴛʜᴇ ʟᴀꜱᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴍᴇꜱꜱᴀɢᴇ ᴏʀ ɪᴛꜱ ʟɪɴᴋ ꜰʀᴏᴍ ʏᴏᴜʀ ꜱᴏᴜʀᴄᴇ ᴄʜᴀᴛ ʜᴇʀᴇ.</b>\n<code>/cancel</code> - <b>ᴀʙᴏʀᴛ ᴛʜɪꜱ ᴏᴘᴇʀᴀᴛɪᴏɴ</b>\n\n<b>🛡️ @IND_BOTZ</b>"
+  
+  TO_MSG = "<blockquote><b><u>🎯 ꜱᴇʟᴇᴄᴛ ᴅᴇꜱᴛɪɴᴀᴛɪᴏɴ</u></b></blockquote>\n\n<b>ᴘɪᴄᴋ ʏᴏᴜʀ ᴛᴀʀɢᴇᴛ ᴄʜᴀɴɴᴇʟ ꜰʀᴏᴍ ᴛʜᴇ ᴍᴇɴᴜ ʙᴇʟᴏᴡ.</b>\n<code>/cancel</code> - <b>ᴀʙᴏʀᴛ ᴛʜɪꜱ ᴏᴘᴇʀᴀᴛɪᴏɴ</b>\n\n<b>🛡️ @IND_BOTZ</b>"
+  
+  SKIP_MSG = "<blockquote><b><u>⏭️ ᴄᴏɴꜰɪɢᴜʀᴇ ꜱᴋɪᴘ ᴘᴀʀᴀᴍᴇᴛᴇʀꜱ</u></b></blockquote>\n\n<b>ᴇɴᴛᴇʀ ᴛʜᴇ ᴇxᴀᴄᴛ ᴀᴍᴏᴜɴᴛ ᴏꜰ ᴍᴇꜱꜱᴀɢᴇꜱ ʏᴏᴜ ᴡɪꜱʜ ᴛᴏ ʙʏᴘᴀꜱꜱ. ᴛʜᴇ ʀᴇᴍᴀɪɴᴅᴇʀ ᴡɪʟʟ ʙᴇ ᴘʀᴏᴄᴇꜱꜱᴇᴅ ɴᴏʀᴍᴀʟʟʏ.</b>\n<b>ᴅᴇꜰᴀᴜʟᴛ ᴠᴀʟᴜᴇ =</b> <code>0</code>\n<code>ᴇxᴀᴍᴘʟᴇ: ɪɴᴘᴜᴛ 5 = 5 ꜰɪʟᴇꜱ ɪɢɴᴏʀᴇᴅ</code>\n<code>/cancel</code> - <b>ᴀʙᴏʀᴛ ᴏᴘᴇʀᴀᴛɪᴏɴ</b>\n\n<b>🛡️ @IND_BOTZ</b>"
+  
+  CANCEL = "<b>🚫 ᴏᴘᴇʀᴀᴛɪᴏɴ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴛᴇʀᴍɪɴᴀᴛᴇᴅ.</b>\n\n<b>♻️ @IND_BOTZ</b>"
+  
+  BOT_DETAILS = "<blockquote><b><u>🤖 ʙᴏᴛ ɪᴅᴇɴᴛɪᴛʏ</u></b></blockquote>\n\n<b>➣ ᴀʟɪᴀꜱ :</b> <code>{}</code>\n<b>➣ ꜱᴇʀɪᴀʟ ɪᴅ :</b> <code>{}</code>\n<b>➣ ᴜꜱᴇʀɴᴀᴍᴇ :</b> @{}\n\n<b>🛡️ @IND_BOTZ</b>"
+  
+  USER_DETAILS = "<blockquote><b><u>👤 ᴜꜱᴇʀʙᴏᴛ ɪᴅᴇɴᴛɪᴛʏ</u></b></blockquote>\n\n<b>➣ ᴀʟɪᴀꜱ :</b> <code>{}</code>\n<b>➣ ꜱᴇʀɪᴀʟ ɪᴅ :</b> <code>{}</code>\n<b>➣ ᴜꜱᴇʀɴᴀᴍᴇ :</b> @{}\n\n<b>🛡️ @IND_BOTZ</b>"  
          
-  TEXT = """<b><u>Forward Status</u></b>
+  TEXT = """<blockquote><b><u>⏳ ᴛʀᴀɴꜱᴍɪꜱꜱɪᴏɴ ɪɴ ᴘʀᴏɢʀᴇꜱꜱ</u></b></blockquote>
   
-<b>🕵 Fetch Message :</b> <code>{}</code>
+<b>📦 ᴇxᴛʀᴀᴄᴛᴇᴅ ᴅᴀᴛᴀ :</b> <code>{}</code>
 
-<b>✅ Successfully Forward :</b> <code>{}</code>
+<b>✅ ᴅᴇʟɪᴠᴇʀᴇᴅ ꜱᴀꜰᴇʟʏ :</b> <code>{}</code>
 
-<b>👥 Dublicate Message :</b> <code>{}</code>
+<b>👥 ᴄʟᴏɴᴇꜱ ᴅᴇᴛᴇᴄᴛᴇᴅ :</b> <code>{}</code>
 
-<b>🗑 Deleted Message :</b> <code>{}</code>
+<b>🗑 ᴛʀᴀꜱʜᴇᴅ ꜰɪʟᴇꜱ :</b> <code>{}</code>
 
-<b>🪆 Skipped Message :</b> <code>{}</code>
+<b>🪆 ʙʏᴘᴀꜱꜱᴇᴅ :</b> <code>{}</code>
 
-<b>🔁 Filtered Message :</b> <code>{}</code>
+<b>🔁 ꜰɪʟᴛᴇʀᴇᴅ ᴏᴜᴛ :</b> <code>{}</code>
 
-<b>📊 Current Status :</b> <code>{}</code>
+<b>📊 ʟɪᴠᴇ ꜱᴛᴀᴛᴜꜱ :</b> <code>{}</code>
 
-<b>🔥 Percentage :</b> <code>{}</code> %
+<b>🔥 ᴄᴏᴍᴘʟᴇᴛɪᴏɴ :</b> <code>{}</code> %
 
 {}
+
+<b>♻️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @IND_BOTZ</b>
 """
 
-  TEXT1 = """<b><u>Forwarded Status</u></b>
+  TEXT1 = """<blockquote><b><u>✅ ᴛʀᴀɴꜱᴍɪꜱꜱɪᴏɴ ᴄᴏᴍᴘʟᴇᴛᴇᴅ</u></b></blockquote>
 
-<b>🕵 Fetched Message :</b> <code>{}</code>
+<b>📦 ᴛᴏᴛᴀʟ ᴇxᴛʀᴀᴄᴛᴇᴅ :</b> <code>{}</code>
 
-<b>✅ Successfully Forward :</b> <code>{}</code>
+<b>✅ ꜱᴜᴄᴄᴇꜱꜱꜰᴜʟʟʏ ᴅᴇʟɪᴠᴇʀᴇᴅ :</b> <code>{}</code>
 
-<b>👥 Dublicate Message :</b> <code>{}</code>
+<b>👥 ᴄʟᴏɴᴇꜱ ꜰᴏᴜɴᴅ :</b> <code>{}</code>
 
-<b>🗑 Deleted Message :</b> <code>{}</code>
+<b>🗑 ᴛʀᴀꜱʜᴇᴅ :</b> <code>{}</code>
 
-<b>🪆 Skipped :</b> <code>{}</code>
+<b>🪆 ʙʏᴘᴀꜱꜱᴇᴅ :</b> <code>{}</code>
 
-<b>📊 Stats :</b> <code>{}</code>
+<b>📊 ꜰɪɴᴀʟ ꜱᴛᴀᴛꜱ :</b> <code>{}</code>
 
-<b>⏳ Progress :</b> <code>{}</code>
+<b>⏳ ᴡᴏʀᴋ ᴘʀᴏɢʀᴇꜱꜱ :</b> <code>{}</code>
 
-<b>⏰ ETA :</b> <code>{}</code>
-
-{}"""
-
-  DUPLICATE_TEXT = """<b><u>Unequify Status</u></b>
-
-<b>🕵 Fetched Files :</b> <code>{}</code>
-
-<b>👥 Dublicate Deleted :</b> <code>{}</code>
+<b>⏰ ᴇꜱᴛɪᴍᴀᴛᴇᴅ ᴛɪᴍᴇ :</b> <code>{}</code>
 
 {}
+
+<b>♻️ ᴘᴏᴡᴇʀᴇᴅ ʙʏ @IND_BOTZ</b>"""
+
+  DUPLICATE_TEXT = """<blockquote><b><u>🧹 ᴄʟᴇᴀɴᴜᴘ ʀᴇᴘᴏʀᴛ</u></b></blockquote>
+
+<b>📦 ꜱᴄᴀɴɴᴇᴅ ꜰɪʟᴇꜱ :</b> <code>{}</code>
+
+<b>🗑 ᴅᴜᴘʟɪᴄᴀᴛᴇꜱ ᴡɪᴘᴇᴅ :</b> <code>{}</code>
+
+{}
+
+<b>🛡️ @IND_BOTZ</b>
 """
-  DOUBLE_CHECK = """<b><u>Double Checking</u></b>
+  DOUBLE_CHECK = """<blockquote><b><u>⚠️ ꜰɪɴᴀʟ ᴠᴇʀɪꜰɪᴄᴀᴛɪᴏɴ</u></b></blockquote>
   
-Before Forwarding The Messages Click The Yes Button Only After Checking The Following
+<b>ᴘʟᴇᴀꜱᴇ ᴄᴏɴꜰɪʀᴍ ᴛʜᴇ ꜰᴏʟʟᴏᴡɪɴɢ ᴘᴀʀᴀᴍᴇᴛᴇʀꜱ ʙᴇꜰᴏʀᴇ ɪɴɪᴛɪᴀᴛɪɴɢ ᴛʜᴇ ᴛʀᴀɴꜱꜰᴇʀ:</b>
 
-<b>★ Your Bot :</b> [{botname}](t.me/{botuname})
-<b>★ From Channel :</b> <code>{from_chat}<>
-<b>★ To Channel :</b> <code>{to_chat}</code>
-<b>★ Skip Messages :</b> <code>{skip}</code>
+<b>★ ᴀᴄᴛɪᴠᴇ ᴇɴɢɪɴᴇ :</b> [{botname}](t.me/{botuname})
+<b>★ ꜱᴏᴜʀᴄᴇ ᴢᴏɴᴇ :</b> <code>{from_chat}</code>
+<b>★ ᴛᴀʀɢᴇᴛ ᴢᴏɴᴇ :</b> <code>{to_chat}</code>
+<b>★ ʙʏᴘᴀꜱꜱ ᴄᴏᴜɴᴛ :</b> <code>{skip}</code>
 
-<i>° [{botname}](t.me/{botuname}) Must Be Admin In <b>Target Chat</b></i> (<code>{to_chat}</code>)
-<i>° If The <b>Source Chat</b> Is Private Your Userbot Must Be Member Or Your Bot Must Be Admin In There Also</i>
+<i>° ᴇɴꜱᴜʀᴇ [{botname}](t.me/{botuname}) ʜᴏʟᴅꜱ ᴀᴅᴍɪɴ ʀɪɢʜᴛꜱ ɪɴ ᴛʜᴇ <b>ᴛᴀʀɢᴇᴛ ᴢᴏɴᴇ</b></i> (<code>{to_chat}</code>).
+<i>° ɪꜰ ᴛʜᴇ <b>ꜱᴏᴜʀᴄᴇ ᴢᴏɴᴇ</b> ɪꜱ ᴘʀɪᴠᴀᴛᴇ, ᴛʜᴇ ᴜꜱᴇʀʙᴏᴛ ᴍᴜꜱᴛ ʙᴇ ᴘʀᴇꜱᴇɴᴛ ᴛʜᴇʀᴇ.</i>
 
-<b>If The Above Is Checked Then The Yes Button Can Be Clicked</b>"""
+<b>ɪꜰ ᴀʟʟ ᴄᴏɴᴅɪᴛɪᴏɴꜱ ᴀʀᴇ ᴍᴇᴛ, ᴘʀᴏᴄᴇᴇᴅ ʙʏ ᴄʟɪᴄᴋɪɴɢ ʏᴇꜱ.</b>
 
-
-
-
-
-
-
-
-
-
-# Jishu Developer 
-# Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+<b>⚡ @IND_BOTZ</b>"""
