@@ -10,3 +10,4 @@ RUN JishuDeveloper /Ultra-Forward-Bot
 WORKDIR /Ultra-Forward-Bot
 COPY start.sh /start.sh
 CMD ["/bin/bash", "/start.sh"] 
+
